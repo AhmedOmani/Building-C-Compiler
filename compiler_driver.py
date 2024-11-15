@@ -16,7 +16,7 @@ def main():
     args = parser.parse_args()
     source_file = args.source_file
 
-    #Step 1 : Preprocess the source file as book mentioned in Chapter1-page7
+    #Step 1: Preprocess the source file as book mentioned in Chapter1-page7
     preprocessed_file = source_file.replace(".c" , ".i")
     try:
         subprocess.run(["gcc" , "-E" , "-P"  , source_file , "-o" , preprocessed_file])
